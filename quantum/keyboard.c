@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <stdint.h>
+#include "../umapper/main.h"
 #include "quantum.h"
 #include "keyboard.h"
 #include "matrix.h"
@@ -420,6 +421,7 @@ void keyboard_init(void) {
 #endif
 
     keyboard_post_init_kb(); /* Always keep this last */
+    umapper_init();
 }
 
 /** \brief key_event_task

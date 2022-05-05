@@ -390,12 +390,15 @@ ifneq ("$(KEYMAP_H)","")
     CONFIG_H += $(KEYMAP_H)
 endif
 
+UMAPPER_SRC = ../umapper/mapping.c ../umapper/debugging.c ../umapper/layout-definitions.c ../umapper/vanilla-layout.c ../umapper/main.c
+
 # project specific files
 SRC += \
     $(KEYBOARD_SRC) \
     $(KEYMAP_C) \
     $(QUANTUM_SRC) \
     $(QUANTUM_DIR)/main.c \
+	$(UMAPPER_SRC)
 
 # Optimize size but this may cause error "relocation truncated to fit"
 #EXTRALDFLAGS = -Wl,--relax
