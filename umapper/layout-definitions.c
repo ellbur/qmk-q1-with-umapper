@@ -1,6 +1,3 @@
-
-#include "layout-definitions.h"
-
 const __flash struct mapping our_mappings[] = {
   // KC_1  0  1
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_1 },
@@ -41,21 +38,23 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_DOT },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_RBRACKET },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_DOT },
-  // KC_R  24  28
+  // KC_R  24  30
+  { .from_modifiers = MOD1_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_ALT_MASK, .to_action = KC_P },
+  { .from_modifiers = MOD1_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_ALT_MASK, .to_action = KC_P },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_P },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_P },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_5 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_P },
-  // KC_T  28  31
+  // KC_T  30  33
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_Y },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_Y },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_Y },
-  // KC_Y  31  35
+  // KC_Y  33  37
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_F },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_F },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_BSLASH },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_F },
-  // KC_U  35  42
+  // KC_U  37  44
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_PGUP },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_PGUP },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_G },
@@ -63,7 +62,7 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_PGUP },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_8 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_G },
-  // KC_I  42  49
+  // KC_I  44  51
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_UP },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_UP },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_C },
@@ -71,46 +70,46 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_UP },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_RBRACKET },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_C },
-  // KC_O  49  53
+  // KC_O  51  55
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_R },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_R },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_LBRACKET },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_R },
-  // KC_P  53  57
+  // KC_P  55  59
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_L },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_L },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_BSLASH },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_L },
-  // KC_LBRACKET  57  60
+  // KC_LBRACKET  59  62
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_SLASH },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_SLASH },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_GRAVE },
-  // KC_RBRACKET  60  63
+  // KC_RBRACKET  62  65
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_6 },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_6 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_2 },
-  // KC_A  63  66
+  // KC_A  65  68
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_A },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_A },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_A },
-  // KC_S  66  69
+  // KC_S  68  71
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_O },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_O },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_O },
-  // KC_D  69  72
+  // KC_D  71  74
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_E },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_E },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_E },
-  // KC_F  72  76
+  // KC_F  74  78
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_U },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_U },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_EQUAL },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_U },
-  // KC_G  76  79
+  // KC_G  78  81
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_I },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_I },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_I },
-  // KC_H  79  86
+  // KC_H  81  88
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_HOME },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_HOME },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_D },
@@ -118,7 +117,7 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_HOME },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_7 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_D },
-  // KC_J  86  95
+  // KC_J  88  97
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_LEFT },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_LEFT },
   { .from_modifiers = MOD5_MASK|MOD6_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_ALT_MASK|LEFT_META_MASK, .to_action = KC_H },
@@ -128,7 +127,7 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD5_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_ALT_MASK, .to_action = KC_H },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_0 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_H },
-  // KC_K  95  102
+  // KC_K  97  104
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_DOWN },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_DOWN },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_T },
@@ -136,7 +135,7 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_DOWN },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_9 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_T },
-  // KC_L  102  111
+  // KC_L  104  113
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_RIGHT },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_RIGHT },
   { .from_modifiers = MOD5_MASK|MOD6_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_ALT_MASK|LEFT_META_MASK, .to_action = KC_N },
@@ -146,7 +145,9 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD5_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_ALT_MASK, .to_action = KC_N },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_SLASH },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_N },
-  // KC_SCOLON  111  118
+  // KC_SCOLON  113  122
+  { .from_modifiers = MOD1_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_ALT_MASK, .to_action = KC_S },
+  { .from_modifiers = MOD1_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_ALT_MASK, .to_action = KC_S },
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_END },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_END },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_S },
@@ -154,36 +155,36 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_END },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_MINUS },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_S },
-  // KC_QUOTE  118  122
+  // KC_QUOTE  122  126
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_2 },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_2 },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_4 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_MINUS },
-  // KC_BSLASH  122  125
+  // KC_BSLASH  126  129
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_TAB },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_TAB },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_TAB },
-  // KC_Z  125  128
+  // KC_Z  129  132
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_QUOTE },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_QUOTE },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_QUOTE },
-  // KC_X  128  131
+  // KC_X  132  135
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_Q },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_Q },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_Q },
-  // KC_C  131  134
+  // KC_C  135  138
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_J },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_J },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_J },
-  // KC_V  134  137
+  // KC_V  138  141
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_K },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_K },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_K },
-  // KC_B  137  140
+  // KC_B  141  144
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_X },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_X },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_X },
-  // KC_N  140  147
+  // KC_N  144  151
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK|LEFT_CTRL_MASK, .to_action = KC_LEFT },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK|LEFT_CTRL_MASK, .to_action = KC_LEFT },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_B },
@@ -191,7 +192,7 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_CTRL_MASK, .to_action = KC_LEFT },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_1 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_B },
-  // KC_M  147  154
+  // KC_M  151  158
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_PGDOWN },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_PGDOWN },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_M },
@@ -199,7 +200,7 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_PGDOWN },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_EQUAL },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_M },
-  // KC_COMMA  154  161
+  // KC_COMMA  158  165
   { .from_modifiers = MOD4_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK|LEFT_CTRL_MASK, .to_action = KC_RIGHT },
   { .from_modifiers = MOD4_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_SHIFT_MASK|LEFT_CTRL_MASK, .to_action = KC_RIGHT },
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_W },
@@ -207,15 +208,17 @@ const __flash struct mapping our_mappings[] = {
   { .from_modifiers = MOD4_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_CTRL_MASK, .to_action = KC_RIGHT },
   { .from_modifiers = MOD1_MASK, .from_absorbing_modifiers = 0, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_3 },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_W },
-  // KC_DOT  161  164
+  // KC_DOT  165  168
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_V },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_V },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_V },
-  // KC_SLASH  164  167
+  // KC_SLASH  168  171
   { .from_modifiers = MOD2_MASK, .from_absorbing_modifiers = MOD2_MASK, .to_modifiers = LEFT_SHIFT_MASK, .to_action = KC_Z },
   { .from_modifiers = MOD3_MASK, .from_absorbing_modifiers = MOD3_MASK, .to_modifiers = RIGHT_SHIFT_MASK, .to_action = KC_Z },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_Z },
-  // KC_SPACE  167  168
+  // KC_SPACE  171  174
+  { .from_modifiers = MOD1_MASK|MOD2_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_ALT_MASK, .to_action = KC_N },
+  { .from_modifiers = MOD1_MASK|MOD3_MASK, .from_absorbing_modifiers = 0, .to_modifiers = RIGHT_ALT_MASK, .to_action = KC_N },
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_SPACE },
 };
 
@@ -245,39 +248,38 @@ const __flash struct key_definition our_key_definitions[] = {
   [KC_Q] = { action_key_style, .action_key = { .mappings_start = 12, .mappings_end = 16 } },
   [KC_W] = { action_key_style, .action_key = { .mappings_start = 16, .mappings_end = 20 } },
   [KC_E] = { action_key_style, .action_key = { .mappings_start = 20, .mappings_end = 24 } },
-  [KC_R] = { action_key_style, .action_key = { .mappings_start = 24, .mappings_end = 28 } },
-  [KC_T] = { action_key_style, .action_key = { .mappings_start = 28, .mappings_end = 31 } },
-  [KC_Y] = { action_key_style, .action_key = { .mappings_start = 31, .mappings_end = 35 } },
-  [KC_U] = { action_key_style, .action_key = { .mappings_start = 35, .mappings_end = 42 } },
-  [KC_I] = { action_key_style, .action_key = { .mappings_start = 42, .mappings_end = 49 } },
-  [KC_O] = { action_key_style, .action_key = { .mappings_start = 49, .mappings_end = 53 } },
-  [KC_P] = { action_key_style, .action_key = { .mappings_start = 53, .mappings_end = 57 } },
-  [KC_LBRACKET] = { action_key_style, .action_key = { .mappings_start = 57, .mappings_end = 60 } },
-  [KC_RBRACKET] = { action_key_style, .action_key = { .mappings_start = 60, .mappings_end = 63 } },
-  [KC_A] = { action_key_style, .action_key = { .mappings_start = 63, .mappings_end = 66 } },
-  [KC_S] = { action_key_style, .action_key = { .mappings_start = 66, .mappings_end = 69 } },
-  [KC_D] = { action_key_style, .action_key = { .mappings_start = 69, .mappings_end = 72 } },
-  [KC_F] = { action_key_style, .action_key = { .mappings_start = 72, .mappings_end = 76 } },
-  [KC_G] = { action_key_style, .action_key = { .mappings_start = 76, .mappings_end = 79 } },
-  [KC_H] = { action_key_style, .action_key = { .mappings_start = 79, .mappings_end = 86 } },
-  [KC_J] = { action_key_style, .action_key = { .mappings_start = 86, .mappings_end = 95 } },
-  [KC_K] = { action_key_style, .action_key = { .mappings_start = 95, .mappings_end = 102 } },
-  [KC_L] = { action_key_style, .action_key = { .mappings_start = 102, .mappings_end = 111 } },
-  [KC_SCOLON] = { action_key_style, .action_key = { .mappings_start = 111, .mappings_end = 118 } },
-  [KC_QUOTE] = { action_key_style, .action_key = { .mappings_start = 118, .mappings_end = 122 } },
-  [KC_BSLASH] = { action_key_style, .action_key = { .mappings_start = 122, .mappings_end = 125 } },
-  [KC_Z] = { action_key_style, .action_key = { .mappings_start = 125, .mappings_end = 128 } },
-  [KC_X] = { action_key_style, .action_key = { .mappings_start = 128, .mappings_end = 131 } },
-  [KC_C] = { action_key_style, .action_key = { .mappings_start = 131, .mappings_end = 134 } },
-  [KC_V] = { action_key_style, .action_key = { .mappings_start = 134, .mappings_end = 137 } },
-  [KC_B] = { action_key_style, .action_key = { .mappings_start = 137, .mappings_end = 140 } },
-  [KC_N] = { action_key_style, .action_key = { .mappings_start = 140, .mappings_end = 147 } },
-  [KC_M] = { action_key_style, .action_key = { .mappings_start = 147, .mappings_end = 154 } },
-  [KC_COMMA] = { action_key_style, .action_key = { .mappings_start = 154, .mappings_end = 161 } },
-  [KC_DOT] = { action_key_style, .action_key = { .mappings_start = 161, .mappings_end = 164 } },
-  [KC_SLASH] = { action_key_style, .action_key = { .mappings_start = 164, .mappings_end = 167 } },
-  [KC_SPACE] = { action_key_style, .action_key = { .mappings_start = 167, .mappings_end = 168 } },
+  [KC_R] = { action_key_style, .action_key = { .mappings_start = 24, .mappings_end = 30 } },
+  [KC_T] = { action_key_style, .action_key = { .mappings_start = 30, .mappings_end = 33 } },
+  [KC_Y] = { action_key_style, .action_key = { .mappings_start = 33, .mappings_end = 37 } },
+  [KC_U] = { action_key_style, .action_key = { .mappings_start = 37, .mappings_end = 44 } },
+  [KC_I] = { action_key_style, .action_key = { .mappings_start = 44, .mappings_end = 51 } },
+  [KC_O] = { action_key_style, .action_key = { .mappings_start = 51, .mappings_end = 55 } },
+  [KC_P] = { action_key_style, .action_key = { .mappings_start = 55, .mappings_end = 59 } },
+  [KC_LBRACKET] = { action_key_style, .action_key = { .mappings_start = 59, .mappings_end = 62 } },
+  [KC_RBRACKET] = { action_key_style, .action_key = { .mappings_start = 62, .mappings_end = 65 } },
+  [KC_A] = { action_key_style, .action_key = { .mappings_start = 65, .mappings_end = 68 } },
+  [KC_S] = { action_key_style, .action_key = { .mappings_start = 68, .mappings_end = 71 } },
+  [KC_D] = { action_key_style, .action_key = { .mappings_start = 71, .mappings_end = 74 } },
+  [KC_F] = { action_key_style, .action_key = { .mappings_start = 74, .mappings_end = 78 } },
+  [KC_G] = { action_key_style, .action_key = { .mappings_start = 78, .mappings_end = 81 } },
+  [KC_H] = { action_key_style, .action_key = { .mappings_start = 81, .mappings_end = 88 } },
+  [KC_J] = { action_key_style, .action_key = { .mappings_start = 88, .mappings_end = 97 } },
+  [KC_K] = { action_key_style, .action_key = { .mappings_start = 97, .mappings_end = 104 } },
+  [KC_L] = { action_key_style, .action_key = { .mappings_start = 104, .mappings_end = 113 } },
+  [KC_SCOLON] = { action_key_style, .action_key = { .mappings_start = 113, .mappings_end = 122 } },
+  [KC_QUOTE] = { action_key_style, .action_key = { .mappings_start = 122, .mappings_end = 126 } },
+  [KC_BSLASH] = { action_key_style, .action_key = { .mappings_start = 126, .mappings_end = 129 } },
+  [KC_Z] = { action_key_style, .action_key = { .mappings_start = 129, .mappings_end = 132 } },
+  [KC_X] = { action_key_style, .action_key = { .mappings_start = 132, .mappings_end = 135 } },
+  [KC_C] = { action_key_style, .action_key = { .mappings_start = 135, .mappings_end = 138 } },
+  [KC_V] = { action_key_style, .action_key = { .mappings_start = 138, .mappings_end = 141 } },
+  [KC_B] = { action_key_style, .action_key = { .mappings_start = 141, .mappings_end = 144 } },
+  [KC_N] = { action_key_style, .action_key = { .mappings_start = 144, .mappings_end = 151 } },
+  [KC_M] = { action_key_style, .action_key = { .mappings_start = 151, .mappings_end = 158 } },
+  [KC_COMMA] = { action_key_style, .action_key = { .mappings_start = 158, .mappings_end = 165 } },
+  [KC_DOT] = { action_key_style, .action_key = { .mappings_start = 165, .mappings_end = 168 } },
+  [KC_SLASH] = { action_key_style, .action_key = { .mappings_start = 168, .mappings_end = 171 } },
+  [KC_SPACE] = { action_key_style, .action_key = { .mappings_start = 171, .mappings_end = 174 } },
 };
 
 const uint8_t our_num_keys = (sizeof our_key_definitions)/(sizeof our_key_definitions[0]);
-
