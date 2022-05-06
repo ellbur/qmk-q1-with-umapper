@@ -1,3 +1,6 @@
+
+#include "layout-definitions.h"
+
 const __flash struct mapping our_mappings[] = {
   // KC_1  0  1
   { .from_modifiers = 0, .from_absorbing_modifiers = 0, .to_modifiers = 0, .to_action = KC_1 },
