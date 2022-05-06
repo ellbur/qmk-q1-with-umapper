@@ -390,7 +390,7 @@ ifneq ("$(KEYMAP_H)","")
     CONFIG_H += $(KEYMAP_H)
 endif
 
-UMAPPER_SRC = ../umapper/mapping.c ../umapper/debugging.c ../umapper/layout-definitions.c ../umapper/vanilla-layout.c ../umapper/main.c
+UMAPPER_SRC = umapper/mapping.c umapper/debugging.c umapper/layout-definitions.c umapper/vanilla-layout.c umapper/main.c
 
 # project specific files
 SRC += \
