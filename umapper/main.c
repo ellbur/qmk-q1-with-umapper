@@ -34,11 +34,11 @@ static void init_state(void) {
 
 static void output_event_routine(void *data, enum event_type t, key_code k) {
   if (t == PRESSED) {
-    add_key_to_report(keyboard_report, k);
+    add_key_to_report(k);
     send_keyboard_report();
   }
   else if (t == RELEASED) {
-    del_key_from_report(keyboard_report, k);
+    del_key_from_report(k);
     send_keyboard_report();
   }
 }

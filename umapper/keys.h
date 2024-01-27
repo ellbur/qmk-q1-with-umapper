@@ -11,8 +11,8 @@ extern "C" {
 #endif
 
 #define MAX_KEYS 0xE8
-typedef enum hid_keyboard_keypad_usage key_code;
-    
+typedef enum qk_keycode_defines key_code;
+
 #ifdef __cplusplus
 }
 #endif
